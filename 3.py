@@ -6,6 +6,7 @@ class Person:
 
 
 class Student(Person):
+    pass
 
 
 a = Person("Nazar")
