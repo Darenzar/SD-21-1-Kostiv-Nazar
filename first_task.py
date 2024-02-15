@@ -1,0 +1,1 @@
+print("Hi, my name is Kostiv Nazar Olegovith and I’m studying software development in college")
