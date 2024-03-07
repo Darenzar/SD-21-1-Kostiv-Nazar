@@ -1,12 +1,16 @@
 class Person:
     def __init__(self, first_name):
         self.first_name = first_name
+
     def greet(self):
-        print("helo student")
+        return "hello student", self.first_name
 
 
 class Student(Person):
-    pass
+    def is_student(self):
+        return True
 
 
-a = Person("Nazar")
+a = Student("Nazar")
+print(a.greet())
+print(a.is_student())
