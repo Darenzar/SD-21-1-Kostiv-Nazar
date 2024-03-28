@@ -4,11 +4,11 @@ import os
 
 
 def record():
-    logs_folder = r'D:\WorkArea\ДЗ 3 курс\Loggs'
-    if not os.path.exists(logs_folder):
-        os.makedirs(logs_folder)
+    logs = r'D:\logs'
+    if not os.path.exists(logs):
+        os.makedirs(logs)
 
-    logs_file = os.path.join(logs_folder, 'MainLoggs.log')
+    logs_file = os.path.join(logs, 'Logs.log')
     logging.basicConfig(filename=logs_file, filemode="w", level=logging.DEBUG)
 
     start_time = time.monotonic()
