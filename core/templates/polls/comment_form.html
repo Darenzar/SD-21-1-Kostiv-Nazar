@@ -1,0 +1,11 @@
+<!-- Показ коментарів -->
+{% for comment in news.comments.all %}
+    <p>{{ comment.author.username }}: {{ comment.text }}</p>
+{% endfor %}
+
+<!-- Форма для додавання коментарів -->
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>

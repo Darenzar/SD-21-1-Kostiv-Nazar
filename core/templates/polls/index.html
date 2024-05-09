@@ -1,0 +1,27 @@
+
+{% load static %}
+{% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+        <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+       <button>
+            <a href="{% url 'polls:create_question' %}">Create Table</a>
+        </button>
+{% else %}
+    <p>No tables are available.</p>
+<button>
+            <a href="{% url 'polls:create_question' %}">Create Table</a>
+        </button>
+{% endif %}
+{% if user.is_authenticated %}
+    <p>Welcome, {{ user.username }}!</p>
+    <form id="logout-form" method="post" action="{% url 'auth:logout' %}">
+    {% csrf_token %}
+    <button type="submit">Logout</button>
+</form>
+{% else %}
+    <p>You are not logged in.</p>
+    <a href="{% url 'auth:login' %}">Log In</a>
+{% endif %}
