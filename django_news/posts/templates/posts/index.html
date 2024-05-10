@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Posts</h2>
+    {% for post in posts %}
+        <h3>Title: {{ post.title }}</h3>
+        <p>Text:{{ post.content }}</p>
+        <p>Author : {{ post.created_by }}</p>
+        <img src="{{ post.image.url }}" alt="{{ post.title }}"><br>
+        <a href="{{ post.get_absolute_url }}">Detail</a>
+        <hr>
+    {% endfor %}
+{% endblock %}

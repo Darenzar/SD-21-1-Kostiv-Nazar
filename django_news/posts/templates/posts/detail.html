@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{{ post.title }}</h1>
+    <p>Text: {{ post.content }}</p>
+    <p>Created by: {{ post.created_by.username }}</p>
+    <img src="{{ post.image.url }}" alt="post image"><br>
+    <a href="{% url 'posts:update' post.id %}">Edit</a>
+    <a href="{% url 'posts:delete' post.id %}">Delete</a>
+    <hr>
+    <a href="{% url 'comments:create' post.id %}">Add Comment</a>
+    <hr>
+    <h2>Comments</h2>
+    {% for comment in post.comments.all %}
+        <p>Created by: {{ comment.author.username }}</p>
+        <p>Text: {{ comment.content }}</p>
+        <a href="{% url 'comments:delete' comment.id %}">Delete</a>
+        <hr>
+    {% endfor %}
+{% endblock %}
