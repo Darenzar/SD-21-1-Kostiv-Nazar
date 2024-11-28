@@ -1,0 +1,1 @@
+from my_django_project.user_stats.admin.admin import UserStatsMainAdmin

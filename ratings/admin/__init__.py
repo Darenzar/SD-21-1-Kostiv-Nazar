@@ -1,0 +1,1 @@
+from my_django_project.ratings.admin.admin import RatingMainAdmin

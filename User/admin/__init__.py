@@ -1,0 +1,1 @@
+from my_django_project.User.admin.admin import UserMainAdmin
