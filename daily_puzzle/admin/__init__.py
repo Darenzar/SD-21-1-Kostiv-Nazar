@@ -1,0 +1,1 @@
+from my_django_project.daily_puzzle.admin.admin import DailyPuzzleAdmin

@@ -1,0 +1,1 @@
+from my_django_project.attempts.models.models import Attempt

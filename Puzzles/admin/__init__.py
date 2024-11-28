@@ -1,0 +1,1 @@
+from my_django_project.Puzzles.admin.admin import PuzzleAdmin

@@ -1,0 +1,1 @@
+from my_django_project.hints.admin.admin import HintsAdmin

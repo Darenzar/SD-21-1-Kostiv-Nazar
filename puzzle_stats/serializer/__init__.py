@@ -1,0 +1,1 @@
+from my_django_project.puzzle_stats.serializer.serializers import PuzzleStatsMainSerializer
